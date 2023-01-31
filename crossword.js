@@ -3,9 +3,9 @@ function loadCrosswordPuzzle(){
         //this is the table on the html page
     var table = document.getElementById("puzzle");
     //an array that holds words for crossword puzzle
-    var arrWords = new Array("JavaScript" , "cascade" , "html");
+    var arrWords = new Array("JavaScript", "cascade", "html");
 //this is the second row on the table
-    var tr =table.rows[1];
+    var tr = table.rows[1];
 
     //this is for loop prints out first word in the array
     //on the second row of the table
@@ -18,7 +18,7 @@ function loadCrosswordPuzzle(){
     //on the second column of the table
     for(var i=0; i<arrWords[1].length; i++){
         var trow = table.rows[i];
-        var cell = tr.cells[1];
+        var cell = trow.cells[1];
         cell.innerText = arrWords[1][i];
     }
 
@@ -26,7 +26,7 @@ function loadCrosswordPuzzle(){
     //on the 10th column of the table
     for(var i=0; i<arrWords[2].length; i++){
         var trow = table.rows[i];
-        var cell = tr.cells[9];
+        var cell = trow.cells[9];
         cell.innerText = arrWords[2][i];
     }
 }
